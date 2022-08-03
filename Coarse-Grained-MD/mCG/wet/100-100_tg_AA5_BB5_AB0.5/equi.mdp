@@ -1,0 +1,59 @@
+; RUN CONTROL PARAMETERS
+integrator               = md
+dt                       = 0.01
+nsteps                   = 1000000
+comm-mode                = Linear
+nstcomm                  = 1
+
+; OUTPUT CONTROL OPTIONS
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 10000 
+nstenergy                = 10000
+nstxout-compressed       = 10000
+compressed-x-precision   = 100
+
+; NEIGHBORSEARCHING PARAMETERS
+cutoff-scheme            = verlet
+nstlist                  = 10
+ns_type                  = grid
+pbc                      = xyz
+verlet-buffer-tolerance  = 0.005
+rlist                    = 1
+
+; OPTIONS FOR ELECTROSTATICS AND VDW 
+coulombtype              = cut-off
+coulomb-modifier         = Potential-shift-Verlet 
+rcoulomb                 = 1.2
+rcoulomb_switch          = 0.0
+epsilon_r                = 15 
+vdw_type                 = Cut-off 
+vdw-modifier             = Potential-shift-Verlet
+rvdw_switch              = 0.9
+rvdw                     = 1.2
+DispCorr                 = No
+;optimize_fft             = no
+
+; OPTIONS FOR WEAK COUPLING ALGORITHMS
+tcoupl                   = v-rescale 
+tc-grps                  = system
+tau-t                    = 1
+ref-t                    = 300
+gen-vel                  = yes
+continuation             = no
+gen-temp                 = 300
+Pcoupl                   = Berendsen 
+Pcoupltype               = isotropic
+tau-p                    = 8.0
+compressibility          = 3e-4
+ref-p                    = 1.0
+refcoord-scaling         = com
+
+
+; OPTIONS FOR BONDS
+constraints              = none 
+constraint_algorithm     = Lincs
+shake_tol                = 0.0001
+lincs_order              = 4
+lincs_warnangle          = 90
