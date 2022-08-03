@@ -1,0 +1,13 @@
+; Include forcefield parameters
+#include "ff.itp"
+#include "mCG-MOL1.itp"
+#include "mCG-MOL2.itp"
+
+[ system ]
+; Name
+MOL in water
+
+[ molecules ]
+; Compound        #mols
+MOL1		  100
+MOL2              100
