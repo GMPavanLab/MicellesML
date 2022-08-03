@@ -1,0 +1,25 @@
+    
+[ defaults ]
+; nbfunc comb-rule gen-pairs fudgeLJ fudgeQQ
+  1      2         no        1.0     1.0
+
+[ atomtypes ]
+; name    mass chrg ptype sig eps
+  A      72.0 0.0  A     0.0 0.0
+  B      72.0 0.0  A     0.0 0.0
+  C1      72.0 0.0  A     0.0 0.0
+
+[ nonbond_params ]
+;  part part   func sigma epsilon
+; self terms
+     A  A     1    0.7   4 
+     B  B     1	   0.7   4 
+     C1 C1    1    0.47   5
+
+; cross terms
+     B  A     1   0.7     0.5 
+     A  C1    1   0.585    0.5
+     B  C1    1   0.585    0.5 
+
+
+
