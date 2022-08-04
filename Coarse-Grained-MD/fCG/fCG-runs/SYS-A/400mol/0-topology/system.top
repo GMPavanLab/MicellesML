@@ -1,0 +1,16 @@
+; Include forcefield parameters
+#include "martini_v2.0_PEO_PS_CNP.itp"
+#include "martini_v2.0_ions.itp"
+#include "MOL1.itp"
+#include "MOL2.itp"
+
+[ system ]
+; Name
+MOL2 in water
+
+[ molecules ]
+; Compound        #mols
+MOL1              200
+MOL2              200
+
+W               55667
