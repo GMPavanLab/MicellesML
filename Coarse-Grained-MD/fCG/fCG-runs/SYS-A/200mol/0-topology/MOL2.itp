@@ -1,0 +1,81 @@
+[ moleculetype ]
+; molname        nrexcl
+MOL2             1
+
+
+[ atoms ]
+; id type resnr residue   atom  cgnr    charge     mass
+
+1      P5     1    MOL2    BKB  1      0.00000 ;
+2      C5     2    MOL2    BA1  2      0.00000 ;
+3     SC5     3    MOL2    BA2  3      0.00000 ;
+4     SC5     4    MOL2    BA3  4      0.00000 ;
+5     SNa     5    MOL2    BB1  5      0.00000 ;
+6     SC5     6    MOL2    BB2  6      0.00000 ;
+7     SC5     7    MOL2    BB3  7      0.00000 ;
+8     SC5     8    MOL2    BB4  8      0.00000 ;
+9     SNa     9    MOL2    BB5  9      0.00000 ;
+10     C1    10    MOL2    TA1  10     0.00000 ;
+11     C1    11    MOL2    TA2  11     0.00000 ;
+12     C1    12    MOL2    TA3  12     0.00000 ;
+13     C1    13    MOL2    TA4  13     0.00000 
+
+
+[ constraints ]
+;   i     j   funct   length        plot.ref.
+
+; constraint type 1
+    3     4       1    0.199      ; 1 
+
+; constraint type 2
+    6     7       1    0.199      ; 2 
+    6     8       1    0.199      ; 2 
+    7     8       1    0.199      ; 2 
+
+
+[ bonds ]
+;   i     j   funct   length   force.c.            plot.ref.
+
+; bond type 1
+    1     2       1    0.370 2255.95           ; 1 
+
+; bond type 2
+    2     3       1    0.248 17713.05           ; 2 
+    2     4       1    0.248 17713.05           ; 2 
+
+; bond type 3
+    1     5       1    0.268 16420.68           ; 3 
+
+; bond type 4
+    5     6       1    0.290 3919.71           ; 4 
+    5     7       1    0.290 3919.71           ; 4 
+
+; bond type 5
+    8     9       1    0.210 15391.33           ; 5 
+
+; bond type 6
+    1    10       1    0.358 4194.34           ; 6 
+
+; bond type 7
+   10    11       1    0.498 1749.49           ; 7 
+   11    12       1    0.498 1749.49           ; 7 
+   12    13       1    0.498 1749.49           ; 7 
+
+
+[ angles ]
+;   i     j     k   funct     angle   force.c.            plot.ref.
+
+; angle type 1
+    5     1    10       2    115.86   19.19           ; 1 
+
+; angle type 2
+    2     1    10       2    138.89   69.55           ; 2 
+
+; angle type 3
+    1    10    11       2    117.63   24.66           ; 3 
+
+; angle type 4
+   10    11    12       2    152.07   43.68           ; 4 
+   11    12    13       2    152.07   43.68           ; 4 
+
+
